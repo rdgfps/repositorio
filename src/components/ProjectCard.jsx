@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Github, ExternalLink, Eye, Star, Heart } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 
-export default function ProjectCard({ project, index = 0 }) {
+const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
   const { toggleFavorite, isFavorite, getViews } = useApp()
   const fav = isFavorite(project.id)
 
@@ -108,4 +109,6 @@ export default function ProjectCard({ project, index = 0 }) {
       </div>
     </article>
   )
-}
+})
+
+export default ProjectCard

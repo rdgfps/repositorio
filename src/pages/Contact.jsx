@@ -1,21 +1,9 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { Mail, Github, Linkedin, Twitter, Send, MapPin, CheckCircle } from 'lucide-react'
 import { developer } from '../data/projects'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
-  const [loading, setLoading] = useState(false)
-
-  const handle = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-
-  const submit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    await new Promise(r => setTimeout(r, 1200))
-    setSent(true)
-    setLoading(false)
-  }
+  const [state, handleSubmit] = useForm('xzdynlyw')
 
   return (
     <main className="min-h-screen pt-28 pb-24 px-4 sm:px-6">
@@ -34,66 +22,62 @@ export default function Contact() {
         <div className="grid md:grid-cols-5 gap-8">
           {/* Form */}
           <div className="md:col-span-3">
-            {sent ? (
+              {state.succeeded ? (
               <div className="card-glass rounded-xl p-10 text-center">
                 <CheckCircle size={40} className="text-accent-lime mx-auto mb-4" />
                 <h3 className="font-display font-semibold text-xl text-text-primary mb-2">Mensagem enviada!</h3>
                 <p className="text-text-secondary text-sm">
                   Obrigado por entrar em contato. Responderei em breve.
                 </p>
-                <button
-                  onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
-                  className="mt-6 btn-ghost px-4 py-2 rounded-lg text-sm"
-                >
-                  Enviar outra mensagem
-                </button>
               </div>
             ) : (
-              <form onSubmit={submit} className="card-glass rounded-xl p-6 flex flex-col gap-4">
+              <form onSubmit={handleSubmit} className="card-glass rounded-xl p-6 flex flex-col gap-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-text-secondary text-xs font-mono">Nome</label>
+                    <label htmlFor="name" className="text-text-secondary text-xs font-mono">Nome</label>
                     <input
+                      id="name"
                       type="text"
                       name="name"
-                      value={form.name}
-                      onChange={handle}
                       required
                       placeholder="Seu nome"
                       className="input-dark px-4 py-3 rounded-xl text-sm font-body"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-text-secondary text-xs font-mono">Email</label>
+                    <label htmlFor="email" className="text-text-secondary text-xs font-mono">Email</label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
-                      value={form.email}
-                      onChange={handle}
                       required
                       placeholder="seu@email.com"
                       className="input-dark px-4 py-3 rounded-xl text-sm font-body"
                     />
+                    <ValidationError field="email" errors={state.errors}
+                      className="text-red-400 text-xs font-mono" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-text-secondary text-xs font-mono">Mensagem</label>
+                  <label htmlFor="message" className="text-text-secondary text-xs font-mono">Mensagem</label>
                   <textarea
+                    id="message"
                     name="message"
-                    value={form.message}
-                    onChange={handle}
                     required
                     rows={6}
                     placeholder="Descreva seu projeto ou oportunidade..."
                     className="input-dark px-4 py-3 rounded-xl text-sm font-body resize-none"
                   />
+                  <ValidationError field="message" errors={state.errors}
+                    className="text-red-400 text-xs font-mono" />
                 </div>
+                <ValidationError errors={state.errors} className="text-red-400 text-xs font-mono" />
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={state.submitting}
                   className="btn-primary px-6 py-3 rounded-xl text-sm flex items-center justify-center gap-2 disabled:opacity-70"
                 >
-                  {loading ? (
+                  {state.submitting ? (
                     <>
                       <span className="w-4 h-4 border-2 border-bg-primary/30 border-t-bg-primary rounded-full animate-spin" />
                       Enviando...

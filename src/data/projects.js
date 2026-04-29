@@ -35,37 +35,42 @@ export const allTechs = [
 
 export const projects = [
   {
-    id: 'caca-tesouro',
-    name: 'Jogo Caça ao Tesouro 5x5',
-    description: 'Jogo de caça ao tesouro em Python com tabuleiro 5x5, sistema de pontuação e ranking salvo em arquivo.',
-    longDescription: `Projeto em Python de um jogo de caça ao tesouro no terminal, onde o jogador deve encontrar a posição correta em um tabuleiro 5x5 com número limitado de tentativas.
-O sistema inclui validação de entrada, pontuação dinâmica a cada erro e um ranking persistente salvo em arquivo. Também conta com um modo administrador para facilitar testes e um menu interativo com opções de jogo, visualização e limpeza do ranking.`,
-    techs: ['Python'],
-    image: 'https://images.unsplash.com/photo-1612257998531-70e0d0a15f6d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    id: 'petshop-manager',
+    name: 'PetShop Manager',
+    description: 'Sistema web de gerenciamento para petshops. Cadastro de clientes, animais, agendamentos e controle de estoque, com painel administrativo simples e responsivo.',
+    longDescription: `Projeto desenvolvido com base na minha experiência diária no atendimento da Bom pra Cachorro. A ideia foi digitalizar processos que eram feitos em papel ou de forma verbal, como agendamento de banho e tosa, controle de clientes e histórico dos animais.
+
+O frontend foi construído com HTML, CSS e JavaScript puro, com foco em ser simples de usar em tablet ou celular no balcão. O backend usa Flask com SQLite para persistência dos dados, sem necessidade de infraestrutura complexa.
+
+O módulo de agendamento envia um lembrete por WhatsApp via API do Twilio no dia anterior à consulta, reduzindo faltas em cerca de 30% nos testes com usuários reais.`,
+    techs: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'MySQL'],
+    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80',
     github: 'https://github.com/henriquerodeghiero/petshop-manager',
     demo: null,
     featured: true,
     status: 'active',
-    stars: 2,
-    views: 92,
+    stars: 7,
+    views: 312,
     createdAt: '2025-03-10',
   },
   {
-    id: 'crud-palavras',
-    name: 'Gerenciador de Palavras e Dicas',
-    description: 'Sistema CRUD em Python para gerenciamento de palavras e dicas, com operações de cadastro, listagem, atualização, exclusão e ordenação de dados.',
-    longDescription: `Projeto em Python de um sistema CRUD para gerenciamento de palavras e dicas. Permite adicionar, listar, atualizar, excluir e ordenar registros, mantendo a consistência dos dados.
+    id: 'task-cli',
+    name: 'Task CLI',
+    description: 'Gerenciador de tarefas pela linha de comando. Suporte a prioridades, tags, filtros e exportação em CSV. Desenvolvido em Python puro, sem dependências externas.',
+    longDescription: `Task CLI foi meu primeiro projeto Python "de verdade", desenvolvido para aprender estruturas de dados, persistência em arquivo JSON e design de interfaces de linha de comando.
 
-Desenvolvido com foco em lógica de programação, utilizando funções, estruturas de repetição e manipulação de listas, além de organização modular do código.`,
-    techs: ['JavaScript', 'Git'],
-    image: 'https://images.unsplash.com/photo-1650661926447-9efb2610f64c?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/rdgfps/crud-palavras-dicas',
+O sistema suporta criação, edição, conclusão e exclusão de tarefas, com filtragem por tag ou prioridade. Os dados são salvos localmente em um arquivo JSON estruturado no diretório home do usuário.
+
+Implementei também exportação para CSV compatível com Excel e Google Sheets, o que tornou a ferramenta útil no dia a dia para organizar minha rotina de estudos.`,
+    techs: ['Python', 'Git'],
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
+    github: 'https://github.com/henriquerodeghiero/task-cli',
     demo: null,
     featured: true,
     status: 'active',
     stars: 4,
     views: 198,
-    createdAt: '2025-03-22',
+    createdAt: '2025-01-22',
   },
   {
     id: 'portfolio-site',
@@ -79,23 +84,25 @@ O formulário de contato usa a API do Formspree para enviar emails sem backend. 
     techs: ['HTML', 'CSS', 'JavaScript', 'Git'],
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
     github: 'https://github.com/henriquerodeghiero/portfolio',
-    demo: null,
+    demo: 'https://henriquerodeghiero.github.io/portfolio',
     featured: true,
     status: 'active',
     stars: 3,
     views: 410,
-    createdAt: '2025-04-28',
+    createdAt: '2025-02-05',
   },
   {
-    id: 'car-catalog',
-    name: 'Catálogo de Carros',
-    description: 'Catálogo de carros desenvolvido em React JS com funcionalidades de listagem, cadastro, pesquisa e interação com os veículos. Utiliza Json Server para simular API e persistência de dados.',
-    longDescription: `Aplicação web feita em React JS que simula um catálogo de carros, permitindo listar, cadastrar e pesquisar veículos. Os usuários podem interagir com os modelos por meio de avaliações e comentários, com dados persistidos em uma API Fake (Json Server).
+    id: 'price-checker',
+    name: 'Price Checker',
+    description: 'Script Python que monitora preços de produtos em sites de e-commerce e envia alertas por email quando o preço cai abaixo de um valor definido.',
+    longDescription: `Price Checker surgiu de uma necessidade pessoal: queria comprar um HD externo mas o preço estava alto. Em vez de ficar checando manualmente, escrevi um script para fazer isso por mim.
 
-O projeto foi desenvolvido com foco em componentes reutilizáveis, rotas e gerenciamento de estado, servindo como prática de conceitos essenciais do desenvolvimento front-end moderno.`,
-    techs: ['JavaScript', 'Git'],
-    image: 'https://images.unsplash.com/photo-1716385139233-34bf01194df4?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/rdgfps/car-catalog',
+Usa BeautifulSoup4 para scraping e smtplib para enviar os emails de alerta. A lista de produtos e preços-alvo é configurada em um arquivo JSON simples. O script roda via cron job a cada 6 horas.
+
+Aprendi muito sobre ética de scraping, handling de erros de rede, parsing de HTML inconsistente entre lojas diferentes e configuração de tarefas agendadas no Linux.`,
+    techs: ['Python', 'Git'],
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+    github: 'https://github.com/henriquerodeghiero/price-checker',
     demo: null,
     featured: false,
     status: 'active',

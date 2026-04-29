@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Code2 } from 'lucide-react'
+import { Github, Linkedin, Twitter, Code2 } from 'lucide-react'
 import { developer } from '../data/projects'
 
 export default function Footer() {
@@ -50,6 +50,9 @@ export default function Footer() {
         <div className="flex items-center justify-between">
           <p className="text-text-muted text-xs font-mono">
             © {new Date().getFullYear()} {developer.name}
+          </p>
+          <p className="text-text-muted text-xs font-mono">
+            built with <span className="text-accent-lime">♥</span>
           </p>
         </div>
       </div>

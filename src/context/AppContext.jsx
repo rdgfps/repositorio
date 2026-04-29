@@ -17,11 +17,8 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem('devfolio_favorites', JSON.stringify(favorites))
-  }, [favorites])
-
-  useEffect(() => {
     localStorage.setItem('devfolio_views', JSON.stringify(views))
-  }, [views])
+  }, [favorites, views])
 
   const toggleFavorite = (id) => {
     setFavorites(prev =>
