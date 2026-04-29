@@ -58,8 +58,8 @@ A aplicação implementa as quatro operações fundamentais (Create, Read, Updat
     longDescription: `Aplicação web feita em React JS que simula um catálogo de carros, permitindo listar, cadastrar e pesquisar veículos. Os usuários podem interagir com os modelos por meio de avaliações e comentários, com dados persistidos em uma API Fake (Json Server).
 
 O projeto foi desenvolvido com foco em componentes reutilizáveis, rotas e gerenciamento de estado, servindo como prática de conceitos essenciais do desenvolvimento front-end moderno.`,
-    techs: ['Python', 'Git'],
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
+    techs: ['JavaScript', 'CSS', 'HTML'],
+    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=983&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/henriquerodeghiero/task-cli',
     demo: null,
     featured: true,
