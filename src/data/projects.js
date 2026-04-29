@@ -94,7 +94,7 @@ O formulário de contato usa a API do Formspree para enviar emails sem backend. 
 
 O projeto foi desenvolvido com foco em componentes reutilizáveis, rotas e gerenciamento de estado, servindo como prática de conceitos essenciais do desenvolvimento front-end moderno.`,
     techs: ['JavaScript', 'Git'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1716385139233-34bf01194df4?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/rdgfps/car-catalog',
     demo: null,
     featured: false,
