@@ -35,16 +35,14 @@ export const allTechs = [
 
 export const projects = [
   {
-    id: 'petshop-manager',
-    name: 'PetShop Manager',
-    description: 'Sistema web de gerenciamento para petshops. Cadastro de clientes, animais, agendamentos e controle de estoque, com painel administrativo simples e responsivo.',
-    longDescription: `Projeto desenvolvido com base na minha experiência diária no atendimento da Bom pra Cachorro. A ideia foi digitalizar processos que eram feitos em papel ou de forma verbal, como agendamento de banho e tosa, controle de clientes e histórico dos animais.
+    id: 'crud-cantina',
+    name: 'CRUD - Cantina Escolar',
+    description: 'Sistema CRUD para gerenciamento de cantina, permitindo cadastro, edição, listagem e exclusão de produtos e dados.',
+    longDescription: `Projeto de um sistema CRUD voltado para gerenciamento de cantina, permitindo o controle de dados como produtos, pedidos ou registros relacionados.
 
-O frontend foi construído com HTML, CSS e JavaScript puro, com foco em ser simples de usar em tablet ou celular no balcão. O backend usa Flask com SQLite para persistência dos dados, sem necessidade de infraestrutura complexa.
-
-O módulo de agendamento envia um lembrete por WhatsApp via API do Twilio no dia anterior à consulta, reduzindo faltas em cerca de 30% nos testes com usuários reais.`,
-    techs: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'MySQL'],
-    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80',
+A aplicação implementa as quatro operações fundamentais (Create, Read, Update e Delete), possibilitando cadastrar novos itens, visualizar registros existentes, atualizar informações e remover dados. O projeto foi desenvolvido com foco em organização lógica, manipulação de dados e estruturação de funcionalidades comuns em sistemas reais de gestão.`,
+    techs: ['TypeScript'  , 'JavaScript', 'HTML', 'CSS'],
+    image: 'https://plus.unsplash.com/premium_photo-1663050786427-8d71c177946c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/henriquerodeghiero/petshop-manager',
     demo: null,
     featured: true,
@@ -54,14 +52,12 @@ O módulo de agendamento envia um lembrete por WhatsApp via API do Twilio no dia
     createdAt: '2025-03-10',
   },
   {
-    id: 'task-cli',
-    name: 'Task CLI',
-    description: 'Gerenciador de tarefas pela linha de comando. Suporte a prioridades, tags, filtros e exportação em CSV. Desenvolvido em Python puro, sem dependências externas.',
-    longDescription: `Task CLI foi meu primeiro projeto Python "de verdade", desenvolvido para aprender estruturas de dados, persistência em arquivo JSON e design de interfaces de linha de comando.
+    id: 'car-catalog',
+    name: 'Catálogo de Carros',
+    description: 'Catálogo de carros desenvolvido em React JS com funcionalidades de listagem, cadastro, pesquisa e interação com os veículos. Utiliza Json Server para simular API e persistência de dados.',
+    longDescription: `Aplicação web feita em React JS que simula um catálogo de carros, permitindo listar, cadastrar e pesquisar veículos. Os usuários podem interagir com os modelos por meio de avaliações e comentários, com dados persistidos em uma API Fake (Json Server).
 
-O sistema suporta criação, edição, conclusão e exclusão de tarefas, com filtragem por tag ou prioridade. Os dados são salvos localmente em um arquivo JSON estruturado no diretório home do usuário.
-
-Implementei também exportação para CSV compatível com Excel e Google Sheets, o que tornou a ferramenta útil no dia a dia para organizar minha rotina de estudos.`,
+O projeto foi desenvolvido com foco em componentes reutilizáveis, rotas e gerenciamento de estado, servindo como prática de conceitos essenciais do desenvolvimento front-end moderno.`,
     techs: ['Python', 'Git'],
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
     github: 'https://github.com/henriquerodeghiero/task-cli',
@@ -73,8 +69,8 @@ Implementei também exportação para CSV compatível com Excel e Google Sheets,
     createdAt: '2025-01-22',
   },
   {
-    id: 'portfolio-site',
-    name: 'Portfólio Pessoal',
+    id: 'devfolio',
+    name: 'Portfólio Dev Pessoal',
     description: 'Site de portfólio pessoal com HTML, CSS e JavaScript vanilla. Design responsivo, tema escuro e animações CSS. Hospedado no GitHub Pages.',
     longDescription: `Meu primeiro projeto web completo, construído do zero sem frameworks. O objetivo foi aprender os fundamentos de HTML semântico, CSS flexbox/grid e JavaScript DOM antes de partir para bibliotecas.
 
@@ -83,8 +79,8 @@ O site tem seções de apresentação, habilidades, projetos e contato. As anima
 O formulário de contato usa a API do Formspree para enviar emails sem backend. Todo o deploy é feito automaticamente via GitHub Actions para o GitHub Pages a cada push na main.`,
     techs: ['HTML', 'CSS', 'JavaScript', 'Git'],
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
-    github: 'https://github.com/henriquerodeghiero/portfolio',
-    demo: 'https://henriquerodeghiero.github.io/portfolio',
+    github: 'https://github.com/rdgfps/repositorio',
+    demo: null,
     featured: true,
     status: 'active',
     stars: 3,
