@@ -34,6 +34,27 @@ export const allTechs = [
 ]
 
 export const projects = [
+   {
+    id: 'pdv-adega',
+    name: 'PDV - Santa Adega',
+    description: 'Sistema de gestão para adega/PDV desenvolvido com Next.js, TypeScript e SQLite. Possui controle de vendas, comandas, produtos e leitura de código de barras. Interface moderna e focada em uso rápido no balcão.',
+    longDescription: `Sistema completo de ponto de venda (PDV) para adega, desenvolvido com foco em performance, usabilidade e aplicação em cenário real. O projeto utiliza Next.js 15 com App Router, TypeScript, TailwindCSS e shadcn/ui para uma interface moderna e responsiva.
+
+O sistema permite gerenciar produtos, comandas e vendas de forma prática, incluindo funcionalidades como leitura de código de barras, aplicação de descontos, cálculo automático de troco e múltiplas formas de pagamento.
+
+No backend, utiliza SQLite com Drizzle ORM para persistência de dados, além de validação com Zod e gerenciamento de estado com React Query. A autenticação é feita com Better Auth, garantindo proteção de rotas e segurança básica para o ambiente administrativo.
+
+O objetivo do projeto foi simular um sistema real de uso em balcão, priorizando velocidade no atendimento e organização das vendas. A estrutura foi pensada para facilitar futuras expansões, como controle de estoque, relatórios financeiros e gestão de usuários.`,
+    techs: ['CSS', 'TypeScript', 'Git'],
+    image: 'https://images.unsplash.com/photo-1647427017067-8f33ccbae493?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/sistema-santaAdega',
+    demo: null,
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 31,
+    createdAt: '2025-05-02',
+  },
   {
     id: 'crud-cantina',
     name: 'CRUD - Cantina Escolar',
