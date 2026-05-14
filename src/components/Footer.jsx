@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <Link to="/" className="text-text-secondary hover:text-text-primary text-xs transition-colors">Home</Link>
               <Link to="/projects" className="text-text-secondary hover:text-text-primary text-xs transition-colors">Projetos</Link>
               <Link to="/favorites" className="text-text-secondary hover:text-text-primary text-xs transition-colors">Favoritos</Link>
@@ -47,7 +47,7 @@ export default function Footer() {
 
         <div className="divider mt-8 mb-6" />
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-text-muted text-xs font-mono">
             © {new Date().getFullYear()} {developer.name}
           </p>

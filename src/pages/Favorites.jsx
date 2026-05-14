@@ -9,11 +9,11 @@ export default function Favorites() {
   const saved = projects.filter(p => favorites.includes(p.id))
 
   return (
-    <main className="min-h-screen pt-28 pb-24 px-4 sm:px-6">
+    <main className="min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
           <p className="text-text-secondary text-xs font-mono uppercase tracking-widest mb-2">coleção</p>
-          <h1 className="font-display font-extrabold text-4xl text-text-primary mb-3 flex items-center gap-3">
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-text-primary mb-3 flex flex-wrap items-center gap-3 break-words">
             Favoritos
             {saved.length > 0 && (
               <span className="text-text-muted font-mono text-base">({saved.length})</span>

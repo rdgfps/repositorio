@@ -67,8 +67,10 @@ export default function Navbar() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-bg-border text-text-secondary"
+          className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-bg-border bg-bg-secondary/70 text-text-secondary"
           onClick={() => setMenuOpen(v => !v)}
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X size={16} /> : <Menu size={16} />}
         </button>
@@ -76,13 +78,15 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-bg-secondary border-b border-bg-border px-4 py-6 flex flex-col gap-5">
-          <NavLink to="/" end className={({ isActive }) => `text-sm ${isActive ? 'text-accent-lime' : 'text-text-secondary'}`}>Home</NavLink>
-          <NavLink to="/projects" className={({ isActive }) => `text-sm ${isActive ? 'text-accent-lime' : 'text-text-secondary'}`}>Projetos</NavLink>
-          <NavLink to="/contact" className={({ isActive }) => `text-sm ${isActive ? 'text-accent-lime' : 'text-text-secondary'}`}>Contato</NavLink>
-          <NavLink to="/favorites" className={({ isActive }) => `text-sm ${isActive ? 'text-accent-lime' : 'text-text-secondary'}`}>
+        <div className="md:hidden bg-bg-secondary/95 backdrop-blur-xl border-y border-bg-border px-4 py-3">
+          <div className="max-w-6xl mx-auto flex flex-col">
+          <NavLink to="/" end className={({ isActive }) => `rounded-lg px-3 py-3 text-sm ${isActive ? 'bg-accent-lime/10 text-accent-lime' : 'text-text-secondary'}`}>Home</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => `rounded-lg px-3 py-3 text-sm ${isActive ? 'bg-accent-lime/10 text-accent-lime' : 'text-text-secondary'}`}>Projetos</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => `rounded-lg px-3 py-3 text-sm ${isActive ? 'bg-accent-lime/10 text-accent-lime' : 'text-text-secondary'}`}>Contato</NavLink>
+          <NavLink to="/favorites" className={({ isActive }) => `rounded-lg px-3 py-3 text-sm ${isActive ? 'bg-accent-lime/10 text-accent-lime' : 'text-text-secondary'}`}>
             Favoritos {favorites.length > 0 && `(${favorites.length})`}
           </NavLink>
+          </div>
         </div>
       )}
     </header>

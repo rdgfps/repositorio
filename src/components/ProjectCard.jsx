@@ -9,7 +9,7 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
 
   return (
     <article
-      className="card-glass rounded-xl overflow-hidden flex flex-col group"
+      className="card-glass rounded-xl overflow-hidden flex flex-col group min-w-0"
       style={{ animationDelay: `${index * 0.08}s`, opacity: 0, animation: `fadeUp 0.5s ease forwards ${index * 0.08}s` }}
     >
       {/* Thumbnail */}
@@ -33,10 +33,10 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
       </Link>
 
       {/* Content */}
-      <div className="p-5 flex flex-col gap-3 flex-1">
-        <div className="flex items-start justify-between gap-2">
-          <Link to={`/projects/${project.id}`}>
-            <h3 className="font-display font-semibold text-base text-text-primary group-hover:text-accent-lime transition-colors leading-tight">
+      <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1 min-w-0">
+        <div className="flex items-start justify-between gap-2 min-w-0">
+          <Link to={`/projects/${project.id}`} className="min-w-0">
+            <h3 className="font-display font-semibold text-base text-text-primary group-hover:text-accent-lime transition-colors leading-tight break-words">
               {project.name}
             </h3>
           </Link>
@@ -72,8 +72,8 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
         </div>
 
         {/* Footer */}
-        <div className="pt-2 border-t border-bg-border flex items-center justify-between">
-          <div className="flex items-center gap-3 text-text-secondary">
+        <div className="pt-2 border-t border-bg-border flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 text-text-secondary min-w-0">
             <span className="flex items-center gap-1 number-counter">
               <Star size={11} />
               {project.stars}
@@ -83,7 +83,7 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
               {getViews(project.id, project.views)}
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <a
               href={project.github}
               target="_blank"

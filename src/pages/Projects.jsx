@@ -37,12 +37,12 @@ export default function Projects() {
   }, [query, activeTechs, sort])
 
   return (
-    <main className="min-h-screen pt-28 pb-24 px-4 sm:px-6">
+    <main className="min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-10" style={{ opacity: 0, animation: 'fadeUp 0.5s ease forwards 0.1s' }}>
           <p className="text-text-secondary text-xs font-mono uppercase tracking-widest mb-2">repositório</p>
-          <h1 className="font-display font-extrabold text-4xl text-text-primary mb-3">
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-text-primary mb-3 break-words">
             Todos os Projetos
           </h1>
           <p className="text-text-secondary text-sm font-body max-w-lg">
@@ -61,11 +61,11 @@ export default function Projects() {
         </div>
 
         {/* Sort + count */}
-        <div className="flex items-center justify-between mb-6" style={{ opacity: 0, animation: 'fadeUp 0.5s ease forwards 0.25s' }}>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6" style={{ opacity: 0, animation: 'fadeUp 0.5s ease forwards 0.25s' }}>
           <span className="text-text-secondary text-xs font-mono">
             {filtered.length} resultado{filtered.length !== 1 ? 's' : ''}
           </span>
-          <div className="flex items-center gap-1 bg-bg-card border border-bg-border rounded-lg p-1">
+          <div className="flex w-full sm:w-auto items-center gap-1 bg-bg-card border border-bg-border rounded-lg p-1 overflow-x-auto">
             {[
               { value: 'stars', label: 'Stars' },
               { value: 'views', label: 'Views' },
@@ -74,7 +74,7 @@ export default function Projects() {
               <button
                 key={s.value}
                 onClick={() => setSort(s.value)}
-                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${
+                className={`flex-1 sm:flex-none px-3 py-1.5 rounded-md text-xs font-mono transition-all ${
                   sort === s.value
                     ? 'bg-accent-lime text-bg-primary font-medium'
                     : 'text-text-secondary hover:text-text-primary'

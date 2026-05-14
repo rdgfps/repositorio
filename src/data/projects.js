@@ -56,6 +56,28 @@ O objetivo do projeto foi simular um sistema real de uso em balcão, priorizando
     createdAt: '2025-05-02',
   },
   {
+    id: 'lp-nutri',
+    name: 'Landing Page Profissional',
+    description: 'Landing page profissional para nutricionista, desenvolvida com foco em conversão e captação de pacientes. Design moderno, responsivo e otimizado para transmitir autoridade e facilitar o contato direto via WhatsApp.',
+
+longDescription: `Landing page desenvolvida para nutricionista com foco em posicionamento profissional e atração de novos pacientes no digital. O projeto foi pensado para funcionar como uma vitrine estratégica, destacando os serviços oferecidos, diferenciais e a credibilidade da profissional.
+
+A página conta com um design moderno, limpo e totalmente responsivo, garantindo uma ótima experiência tanto no desktop quanto no mobile. A estrutura foi planejada para conduzir o usuário de forma intuitiva, utilizando técnicas de conversão como chamadas para ação (CTAs), seções de prova social e apresentação clara dos benefícios do acompanhamento nutricional.
+
+Além disso, a landing page foi otimizada para performance e carregamento rápido, com integração direta ao WhatsApp para facilitar o contato e aumentar a taxa de conversão.
+
+O principal objetivo do projeto foi transformar visitantes em potenciais clientes, criando uma presença digital profissional e eficiente para a nutricionista.`,
+    techs: ['CSS', 'TypeScript', 'Git'],
+    image: 'https://images.unsplash.com/photo-1648134859177-66e35b61e106?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/lp-profissional',
+    demo: null,
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 27,
+    createdAt: '2025-05-13',
+  },
+  {
     id: 'crud-cantina',
     name: 'CRUD - Cantina Escolar',
     description: 'Sistema CRUD para gerenciamento de cantina, permitindo cadastro, edição, listagem e exclusão de produtos e dados.',

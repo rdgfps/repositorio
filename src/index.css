@@ -255,4 +255,20 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, #1e1e24, transparent);
   }
+
+  @media (max-width: 640px) {
+    .grid-bg {
+      background-size: 42px 42px;
+    }
+
+    .card-glass:hover,
+    .btn-primary:hover {
+      transform: none;
+    }
+
+    .project-thumbnail img,
+    .card-glass:hover .project-thumbnail img {
+      transform: none;
+    }
+  }
 }

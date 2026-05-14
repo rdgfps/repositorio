@@ -38,12 +38,12 @@ export default function SearchFilter({ query, setQuery, activeTechs, setActiveTe
       </div>
 
       {/* Tech filters */}
-      <div className="flex flex-wrap gap-2">
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
         {allTechs.map(tech => (
           <button
             key={tech}
             onClick={() => toggle(tech)}
-            className={`tag-tech px-2.5 py-1 rounded cursor-pointer ${activeTechs.includes(tech) ? 'active' : ''}`}
+            className={`tag-tech flex-shrink-0 px-2.5 py-1 rounded cursor-pointer ${activeTechs.includes(tech) ? 'active' : ''}`}
           >
             {tech}
           </button>
@@ -51,7 +51,7 @@ export default function SearchFilter({ query, setQuery, activeTechs, setActiveTe
         {hasFilters && (
           <button
             onClick={clear}
-            className="px-2.5 py-1 rounded text-[0.7rem] font-mono text-text-secondary border border-bg-border hover:border-text-muted hover:text-text-primary transition-colors"
+            className="flex-shrink-0 px-2.5 py-1 rounded text-[0.7rem] font-mono text-text-secondary border border-bg-border hover:border-text-muted hover:text-text-primary transition-colors"
           >
             limpar
           </button>
