@@ -4,10 +4,9 @@ export const developer = {
   bio: 'Estudante de Análise e Desenvolvimento de Sistemas na UniSenac, com experiência em atendimento ao público e foco no desenvolvimento de soluções web e automações com Python e JavaScript.',
   location: 'Canguçu, RS',
   email: 'henrique_rodeghiero@hotmail.com',
-  phone: '(53) 991566695',
-  github: 'https://github.com/henriquerodeghiero',
+  phone: '(53) 99156-6695',
+  github: 'https://github.com/rdgfps',
   linkedin: 'https://linkedin.com/in/henriquerodeghiero',
-  twitter: 'https://twitter.com/henriquerodeghiero',
   avatar: 'https://api.dicebear.com/9.x/initials/svg?seed=HR&backgroundColor=c8f135&textColor=0a0a0b&fontSize=38',
   stack: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git'],
   education: [
