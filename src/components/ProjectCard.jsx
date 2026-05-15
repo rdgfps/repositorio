@@ -93,13 +93,13 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
             >
               <Github size={12} />
             </a>
-            {project.demo && (
+            {project.deploy && (
               <a
-                href={project.demo}
+                href={project.deploy}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-7 h-7 rounded-md border border-bg-border flex items-center justify-center text-text-secondary hover:text-accent-lime hover:border-accent-lime/30 transition-all"
-                title="Demo"
+                title="Ver deploy"
               >
                 <ExternalLink size={12} />
               </a>

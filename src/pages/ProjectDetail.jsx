@@ -127,15 +127,15 @@ export default function ProjectDetail() {
             <Github size={15} />
             Ver no GitHub
           </a>
-          {project.demo && (
+          {project.deploy && (
             <a
-              href={project.demo}
+              href={project.deploy}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm"
             >
               <ExternalLink size={14} />
-              Ver Demo
+              Ver deploy
             </a>
           )}
         </div>
