@@ -33,6 +33,22 @@ export const allTechs = [
 ]
 
 export const projects = [
+  {
+    id: 'analise-dataset',
+    name: 'Análise de dataset do kaggle',
+  description: 'Análise de reservas de hotel desenvolvida em Python, com leitura de dataset, menu interativo, agrupamentos, rankings, comparação entre hotéis e geração de gráficos.',
+
+longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, usado para analisar reservas de hotel por meio de listas, dicionários e conjuntos. A aplicação permite agrupar reservas por tipo de hotel, listar os países com mais reservas, comparar City Hotel e Resort Hotel, analisar países usando operações de conjuntos e gerar gráficos em SVG com os resultados.`,
+    techs: ['python'],
+    image: 'https://unsplash.com/pt-br/fotografias/laptop-computer-on-glass-top-table-hpjSkU2UYSU',
+    github: 'https://github.com/henriquerodeghiero/analise-dataset',
+    deploy: null,
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 8,
+    createdAt: '2025-05-25',
+  },
    {
     id: 'pdv-adega-demo',
     name: 'PDV - Santa Adega Demo',
