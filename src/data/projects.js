@@ -40,7 +40,7 @@ export const projects = [
 
 longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, usado para analisar reservas de hotel por meio de listas, dicionários e conjuntos. A aplicação permite agrupar reservas por tipo de hotel, listar os países com mais reservas, comparar City Hotel e Resort Hotel, analisar países usando operações de conjuntos e gerar gráficos em SVG com os resultados.`,
     techs: ['python'],
-    image: 'https://unsplash.com/pt-br/fotografias/laptop-computer-on-glass-top-table-hpjSkU2UYSU',
+    image: 'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/henriquerodeghiero/analise-dataset',
     deploy: null,
     featured: true,
