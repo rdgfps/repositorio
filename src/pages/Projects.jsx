@@ -1,12 +1,44 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { projects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 import SearchFilter from '../components/SearchFilter'
 
 export default function Projects() {
+  const [searchParams, setSearchParams] = useSearchParams()
   const [query, setQuery] = useState('')
   const [activeTechs, setActiveTechs] = useState([])
   const [sort, setSort] = useState('stars')
+  const queryParam = searchParams.get('q') || ''
+  const techParamKey = searchParams.getAll('tech').join('|')
+
+  useEffect(() => {
+    setQuery(queryParam)
+    setActiveTechs(techParamKey ? techParamKey.split('|') : [])
+  }, [queryParam, techParamKey])
+
+  const handleQueryChange = (value) => {
+    setQuery(value)
+    setSearchParams(prev => {
+      const next = new URLSearchParams(prev)
+      if (value) next.set('q', value)
+      else next.delete('q')
+      return next
+    })
+  }
+
+  const handleTechsChange = (updater) => {
+    const nextTechs = typeof updater === 'function' ? updater(activeTechs) : updater
+
+    setActiveTechs(nextTechs)
+    setSearchParams(prevParams => {
+      const next = new URLSearchParams(prevParams)
+      next.delete('tech')
+      nextTechs.forEach(tech => next.append('tech', tech))
+      return next
+    })
+  }
+
 
   const filtered = useMemo(() => {
     let result = [...projects]
@@ -54,9 +86,9 @@ export default function Projects() {
         <div className="mb-8" style={{ opacity: 0, animation: 'fadeUp 0.5s ease forwards 0.2s' }}>
           <SearchFilter
             query={query}
-            setQuery={setQuery}
+            setQuery={handleQueryChange}
             activeTechs={activeTechs}
-            setActiveTechs={setActiveTechs}
+            setActiveTechs={handleTechsChange}
           />
         </div>
 

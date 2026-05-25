@@ -7,6 +7,7 @@ export const developer = {
   phone: '(53) 99156-6695',
   github: 'https://github.com/rdgfps',
   linkedin: 'https://linkedin.com/in/henriquerodeghiero',
+  instagram: 'https://instagram.com/henriquerodeghiero',
   avatar: 'https://api.dicebear.com/9.x/initials/svg?seed=HR&backgroundColor=c8f135&textColor=0a0a0b&fontSize=38',
   stack: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git'],
   education: [
@@ -39,7 +40,7 @@ export const projects = [
   description: 'Análise de reservas de hotel desenvolvida em Python, com leitura de dataset, menu interativo, agrupamentos, rankings, comparação entre hotéis e geração de gráficos.',
 
 longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, usado para analisar reservas de hotel por meio de listas, dicionários e conjuntos. A aplicação permite agrupar reservas por tipo de hotel, listar os países com mais reservas, comparar City Hotel e Resort Hotel, analisar países usando operações de conjuntos e gerar gráficos em SVG com os resultados.`,
-    techs: ['python'],
+    techs: ['Python'],
     image: 'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/henriquerodeghiero/analise-dataset',
     deploy: null,

@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { ArrowLeft, Github, ExternalLink, Eye, Star, Heart, Calendar, ArrowRight } from 'lucide-react'
 import { projects } from '../data/projects'
 import { useApp } from '../context/AppContext'
@@ -9,15 +9,19 @@ export default function ProjectDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { toggleFavorite, isFavorite, incrementView, getViews } = useApp()
+  const viewedProject = useRef(null)
 
   const project = projects.find(p => p.id === id)
   const related = projects.filter(p => p.id !== id && p.techs.some(t => project?.techs.includes(t))).slice(0, 3)
 
   useEffect(() => {
     if (!project) return navigate('/projects')
-    incrementView(project.id)
+    if (viewedProject.current !== project.id) {
+      incrementView(project.id)
+      viewedProject.current = project.id
+    }
     window.scrollTo(0, 0)
-  }, [id])
+  }, [id, project, navigate, incrementView])
 
   if (!project) return null
 

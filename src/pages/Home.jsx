@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Github, Linkedin, Twitter, MapPin, Star, GitCommit, Folder, Calendar, GraduationCap, Globe } from 'lucide-react'
+import { ArrowRight, Github, Instagram, Linkedin, MapPin, Star, GitCommit, Folder, Calendar, GraduationCap, Globe } from 'lucide-react'
 import { developer, projects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 
@@ -92,9 +92,9 @@ export default function Home() {
                   className="text-text-secondary hover:text-accent-lime transition-colors">
                   <Linkedin size={16} />
                 </a>
-                <a href={developer.twitter} target="_blank" rel="noopener noreferrer"
+                <a href={developer.instagram} target="_blank" rel="noopener noreferrer"
                   className="text-text-secondary hover:text-accent-lime transition-colors">
-                  <Twitter size={16} />
+                  <Instagram size={16} />
                 </a>
               </div>
             </div>

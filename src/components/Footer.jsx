@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Twitter, Code2 } from 'lucide-react'
+import { Github, Instagram, Linkedin, Code2 } from 'lucide-react'
 import { developer } from '../data/projects'
 
 export default function Footer() {
@@ -37,9 +37,9 @@ export default function Footer() {
                 className="w-8 h-8 rounded-lg border border-bg-border flex items-center justify-center text-text-secondary hover:text-text-primary hover:border-text-muted transition-all">
                 <Linkedin size={13} />
               </a>
-              <a href={developer.twitter} target="_blank" rel="noopener noreferrer"
+              <a href={developer.instagram} target="_blank" rel="noopener noreferrer"
                 className="w-8 h-8 rounded-lg border border-bg-border flex items-center justify-center text-text-secondary hover:text-text-primary hover:border-text-muted transition-all">
-                <Twitter size={13} />
+                <Instagram size={13} />
               </a>
             </div>
           </div>

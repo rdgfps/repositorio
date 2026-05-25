@@ -14,7 +14,7 @@ Repositório de projetos moderno para desenvolvedores. Construído com React, Vi
 - Tema escuro com efeitos visuais (grain, grid, gradients)
 - Layout responsivo mobile-first
 - Animações suaves (fade-up, hover, transições)
-- Página de contato com formulário
+- Página de contato com links diretos para WhatsApp, GitHub e email
 
 ## Como rodar
 
