@@ -50,6 +50,22 @@ longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, us
     views: 8,
     createdAt: '2025-05-25',
   },
+  {
+    id: 'catalogo-bpc',
+    name: 'Catálogo de produtos Bom Pra Cachorro',
+  description: 'Catálogo digital para pet shop desenvolvido em Next.js, com importação de produtos, área admin protegida, busca inteligente, contatos via WhatsApp e identidade visual personalizada.',
+
+longDescription: `Aplicação web criada para o Bom Pra Cachorro Pet Shop, com foco em apresentar produtos de forma rápida e diferente de um ecommerce tradicional. O projeto conta com catálogo público, filtros por categoria, busca estilo command palette, cards personalizados por tipo de produto, botão flutuante de WhatsApp com escolha de atendimento, seção de localização com radar visual e página 404 personalizada. Também inclui área administrativa protegida por login, importação de produtos por arquivo exportado do MarketUP e configuração de contatos e localização da loja.`,
+    techs: ['TypeScript', 'Git', 'CSS', 'HTML'],
+    image: 'https://unsplash.com/pt-br/fotografias/um-cao-que-senta-se-em-um-carrinho-de-compras-em-uma-loja-rEpbaGARi7k',
+    github: 'https://github.com/henriquerodeghiero/catalogo-bpc',
+    deploy: 'https://catalogo-bpc.vercel.app/',
+    featured: true,
+    status: 'active',
+    stars: 2,
+    views: 60,
+    createdAt: '2025-05-31',
+  },
    {
     id: 'pdv-adega-demo',
     name: 'PDV - Santa Adega Demo',
