@@ -22,6 +22,12 @@
   50%       { opacity: 0.4; }
 }
 
+@keyframes scanLine {
+  0%   { transform: translateX(-30%); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -76,11 +82,36 @@
     background-size: 150px;
   }
 
+  .site-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
   .grid-bg {
     background-image: 
       linear-gradient(rgba(200, 241, 53, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(200, 241, 53, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
+  }
+
+  .hero-sheen {
+    background:
+      linear-gradient(120deg, transparent 0%, rgba(200, 241, 53, 0.05) 42%, transparent 68%),
+      linear-gradient(135deg, rgba(0, 229, 204, 0.06), transparent 32%),
+      linear-gradient(180deg, rgba(22, 22, 26, 0.4), transparent);
+  }
+
+  .hero-sheen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    background: linear-gradient(90deg, transparent, rgba(240, 240, 242, 0.04), transparent);
+    animation: scanLine 8s ease-in-out infinite;
   }
 
   .card-glass {
@@ -94,6 +125,16 @@
     border-color: #2a2a34;
     transform: translateY(-2px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(200, 241, 53, 0.05);
+  }
+
+  .project-card {
+    background:
+      linear-gradient(180deg, rgba(240, 240, 242, 0.025), transparent 38%),
+      #16161a;
+  }
+
+  .project-card:hover {
+    border-color: rgba(200, 241, 53, 0.22);
   }
 
   .tag-tech {
@@ -150,6 +191,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08em;
+    font-size: clamp(2.5rem, 5.4vw, 4rem);
+    line-height: 0.95;
+  }
+
+  .hero-title span {
+    white-space: nowrap;
   }
 
   .animate-stagger > * {
@@ -257,11 +310,17 @@
   }
 
   @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.05;
+    }
+
     .grid-bg {
       background-size: 42px 42px;
     }
 
     .card-glass:hover,
+    .project-card:hover,
     .btn-primary:hover {
       transform: none;
     }

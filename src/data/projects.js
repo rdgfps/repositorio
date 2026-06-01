@@ -7,7 +7,7 @@ export const developer = {
   phone: '(53) 99156-6695',
   github: 'https://github.com/rdgfps',
   linkedin: 'https://linkedin.com/in/henriquerodeghiero',
-  instagram: 'https://instagram.com/henriquerodeghiero',
+  instagram: 'https://instagram.com/rodeghierotech',
   avatar: 'https://api.dicebear.com/9.x/initials/svg?seed=HR&backgroundColor=c8f135&textColor=0a0a0b&fontSize=38',
   stack: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git'],
   education: [
@@ -21,7 +21,7 @@ export const developer = {
     { name: 'Espanhol', level: 2 },
   ],
   stats: {
-    projects: 6,
+    projects: 7,
     commits: 140,
     stars: 18,
     years: 1,

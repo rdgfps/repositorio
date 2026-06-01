@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { Github, ExternalLink, Eye, Star, Heart } from 'lucide-react'
+import { Github, ExternalLink, Eye, Star, Heart, ArrowUpRight } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 
 const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
@@ -9,20 +9,32 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
 
   return (
     <article
-      className="card-glass rounded-xl overflow-hidden flex flex-col group min-w-0"
+      className="card-glass project-card rounded-xl overflow-hidden flex flex-col group min-w-0 relative"
       style={{ animationDelay: `${index * 0.08}s`, opacity: 0, animation: `fadeUp 0.5s ease forwards ${index * 0.08}s` }}
     >
-      {/* Thumbnail */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-lime/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
       <Link to={`/projects/${project.id}`} className="project-thumbnail block">
         <img
           src={project.image}
           alt={project.name}
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/90 via-bg-primary/20 to-transparent opacity-70 transition-opacity group-hover:opacity-90" />
+        <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+          <span className="text-text-primary text-xs font-mono">abrir projeto</span>
+          <span className="w-8 h-8 rounded-lg bg-accent-lime text-bg-primary flex items-center justify-center">
+            <ArrowUpRight size={14} />
+          </span>
+        </div>
         {project.featured && (
-          <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-accent-lime/10 border border-accent-lime/20 text-accent-lime text-[10px] font-mono">
-            featured
+          <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-bg-primary/70 backdrop-blur border border-accent-lime/25 text-accent-lime text-[10px] font-mono">
+            destaque
+          </div>
+        )}
+        {project.deploy && (
+          <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-accent-cyan/10 backdrop-blur border border-accent-cyan/20 text-accent-cyan text-[10px] font-mono">
+            online
           </div>
         )}
         {project.status === 'archived' && (
@@ -32,7 +44,6 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
         )}
       </Link>
 
-      {/* Content */}
       <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2 min-w-0">
           <Link to={`/projects/${project.id}`} className="min-w-0">
@@ -57,7 +68,6 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
           {project.description}
         </p>
 
-        {/* Techs */}
         <div className="flex flex-wrap gap-1.5">
           {project.techs.slice(0, 4).map(tech => (
             <span key={tech} className="tag-tech px-2 py-0.5 rounded">
@@ -71,8 +81,7 @@ const ProjectCard = memo(function ProjectCard({ project, index = 0 }) {
           )}
         </div>
 
-        {/* Footer */}
-        <div className="pt-2 border-t border-bg-border flex items-center justify-between gap-3">
+        <div className="pt-3 mt-auto border-t border-bg-border flex items-center justify-between gap-3">
           <div className="flex items-center gap-3 text-text-secondary min-w-0">
             <span className="flex items-center gap-1 number-counter">
               <Star size={11} />

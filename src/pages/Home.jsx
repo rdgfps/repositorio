@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Github, Instagram, Linkedin, MapPin, Star, GitCommit, Folder, Calendar, GraduationCap, Globe } from 'lucide-react'
+import { ArrowRight, Github, Instagram, Linkedin, MapPin, Star, GitCommit, Folder, Calendar, GraduationCap, Globe, Code2, Database, Wrench } from 'lucide-react'
 import { developer, projects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 
@@ -28,16 +28,51 @@ function LangBar({ name, level }) {
   )
 }
 
+const stackGroups = [
+  {
+    title: 'Frontend',
+    icon: Code2,
+    items: ['React', 'Next.js', 'Vite', 'TailwindCSS', 'JavaScript', 'TypeScript'],
+  },
+  {
+    title: 'Dados e backend',
+    icon: Database,
+    items: ['Python', 'Node.js', 'SQLite', 'MySQL', 'Prisma', 'APIs REST'],
+  },
+  {
+    title: 'Entrega',
+    icon: Wrench,
+    items: ['Git', 'Vercel', 'Deploy', 'Responsividade', 'UI polish', 'Automações'],
+  },
+]
+
+const timelineItems = [
+  {
+    period: '2026',
+    title: 'Portfólio focado em projetos reais',
+    description: 'Organização dos principais projetos com deploy, detalhes técnicos e contato direto.',
+  },
+  {
+    period: '2025',
+    title: 'ADS na UniSenac',
+    description: 'Base acadêmica em análise, estruturação de sistemas, dados e desenvolvimento web.',
+  },
+  {
+    period: 'Projetos',
+    title: 'Aplicações com uso prático',
+    description: 'PDV, catálogo, landing pages, CRUDs e análises em Python com foco em resolver problemas reais.',
+  },
+]
+
 export default function Home() {
   const featured = projects.filter(p => p.featured)
+  const [firstName, ...lastNameParts] = developer.name.split(' ')
+  const lastName = lastNameParts.join(' ')
 
   return (
     <main className="min-h-screen">
       {/* Hero */}
       <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
-        {/* BG effects */}
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-accent-lime/4 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-accent-cyan/3 blur-[80px] pointer-events-none" />
         <div className="absolute inset-0 grid-bg pointer-events-none opacity-40" />
 
         <div className="max-w-6xl mx-auto">
@@ -55,8 +90,9 @@ export default function Home() {
                 <p className="text-text-secondary text-sm font-mono mb-2 tracking-widest uppercase">
                   &lt;developer/&gt;
                 </p>
-                <h1 className="font-display font-extrabold text-4xl sm:text-6xl leading-tight sm:leading-none text-text-primary break-words">
-                  {developer.name}
+                <h1 className="hero-title font-display font-extrabold text-text-primary">
+                  <span>{firstName}</span>
+                  <span>{lastName}</span>
                 </h1>
                 <h2 className="font-display font-medium text-lg sm:text-xl mt-2 text-gradient-lime">
                   {developer.title}
@@ -135,6 +171,17 @@ export default function Home() {
                   </div>
                 </div>
 
+                <div className="border-t border-bg-border pt-4 grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-text-muted text-[10px] font-mono uppercase tracking-widest">foco</p>
+                    <p className="mt-1 text-text-primary text-xs">Interfaces web</p>
+                  </div>
+                  <div>
+                    <p className="text-text-muted text-[10px] font-mono uppercase tracking-widest">perfil</p>
+                    <p className="mt-1 text-text-primary text-xs">Júnior em evolução</p>
+                  </div>
+                </div>
+
                 {/* Education */}
                 <div>
                   <div className="flex items-center gap-1.5 mb-2">
@@ -161,6 +208,78 @@ export default function Home() {
                     {developer.languages.map(l => <LangBar key={l.name} name={l.name} level={l.level} />)}
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col gap-3 mb-8">
+            <p className="text-text-secondary text-xs font-mono uppercase tracking-widest">competências</p>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-text-primary">
+                Stack organizada para entregar produtos completos
+              </h2>
+              <p className="text-text-secondary text-sm leading-relaxed max-w-md">
+                Tecnologias separadas por uso real no projeto: interface, dados, backend e entrega.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {stackGroups.map(({ title, icon: Icon, items }) => (
+              <div key={title} className="card-glass rounded-xl p-5 flex flex-col gap-4">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-10 h-10 rounded-lg border border-accent-lime/15 bg-accent-lime/8 flex items-center justify-center">
+                    <Icon size={17} className="text-accent-lime" />
+                  </div>
+                  <span className="text-text-muted text-[10px] font-mono uppercase tracking-widest">stack</span>
+                </div>
+                <h3 className="font-display font-semibold text-text-primary">{title}</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {items.map(item => (
+                    <span key={item} className="tag-tech px-2 py-0.5 rounded">{item}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 lg:gap-12">
+            <div>
+              <p className="text-text-secondary text-xs font-mono uppercase tracking-widest mb-2">trajetória</p>
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-text-primary mb-4">
+                Evolução visível em projetos
+              </h2>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                A timeline deixa claro o caminho de aprendizado e mostra que o portfólio não é só visual: ele acompanha prática, estudo e entrega.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute left-3 top-3 bottom-3 w-px bg-bg-border" />
+              <div className="flex flex-col gap-4">
+                {timelineItems.map((item, index) => (
+                  <div key={item.title} className="relative pl-9">
+                    <div className="absolute left-0 top-1 w-6 h-6 rounded-full border border-accent-lime/25 bg-bg-primary flex items-center justify-center">
+                      <span className="w-2 h-2 rounded-full bg-accent-lime" />
+                    </div>
+                    <div className="card-glass rounded-xl p-5">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                        <p className="text-accent-lime text-xs font-mono">{item.period}</p>
+                        <p className="text-text-muted text-[10px] font-mono">0{index + 1}</p>
+                      </div>
+                      <h3 className="font-display font-semibold text-text-primary mb-2">{item.title}</h3>
+                      <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

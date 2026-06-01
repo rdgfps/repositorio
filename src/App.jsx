@@ -13,6 +13,7 @@ export default function App() {
     <AppProvider>
       <BrowserRouter>
         <div className="relative min-h-screen">
+          <div className="site-background hero-sheen" />
           <div className="grain-overlay" />
           <Navbar />
           <Routes>

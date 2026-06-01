@@ -51,9 +51,6 @@ export default function Footer() {
           <p className="text-text-muted text-xs font-mono">
             © {new Date().getFullYear()} {developer.name}
           </p>
-          <p className="text-text-muted text-xs font-mono">
-            built with <span className="text-accent-lime">♥</span>
-          </p>
         </div>
       </div>
     </footer>
