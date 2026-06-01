@@ -58,7 +58,7 @@ longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, us
 longDescription: `Aplicação web criada para o Bom Pra Cachorro Pet Shop, com foco em apresentar produtos de forma rápida e diferente de um ecommerce tradicional. O projeto conta com catálogo público, filtros por categoria, busca estilo command palette, cards personalizados por tipo de produto, botão flutuante de WhatsApp com escolha de atendimento, seção de localização com radar visual e página 404 personalizada. Também inclui área administrativa protegida por login, importação de produtos por arquivo exportado do MarketUP e configuração de contatos e localização da loja.`,
     techs: ['TypeScript', 'Git', 'CSS', 'HTML'],
     image: 'https://images.unsplash.com/photo-1516453734593-8d198ae84bcf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/henriquerodeghiero/catalogo-bpc',
+    github: 'https://github.com/rdgfps/catalogo-bpc',
     deploy: 'https://catalogo-bpc.vercel.app/',
     featured: true,
     status: 'active',
