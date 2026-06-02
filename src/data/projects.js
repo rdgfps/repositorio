@@ -42,13 +42,13 @@ export const projects = [
 longDescription: `Programa em Python baseado no dataset Hotel Booking Demand, usado para analisar reservas de hotel por meio de listas, dicionários e conjuntos. A aplicação permite agrupar reservas por tipo de hotel, listar os países com mais reservas, comparar City Hotel e Resort Hotel, analisar países usando operações de conjuntos e gerar gráficos em SVG com os resultados.`,
     techs: ['Python'],
     image: 'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/henriquerodeghiero/analise-dataset',
+    github: 'https://github.com/rdgfps/analise-dataset',
     deploy: null,
     featured: true,
     status: 'active',
     stars: 0,
     views: 8,
-    createdAt: '2025-05-25',
+    createdAt: '2026-05-25',
   },
   {
     id: 'catalogo-bpc',
@@ -64,7 +64,7 @@ longDescription: `Aplicação web criada para o Bom Pra Cachorro Pet Shop, com f
     status: 'active',
     stars: 2,
     views: 60,
-    createdAt: '2025-05-31',
+    createdAt: '2026-05-31',
   },
    {
     id: 'pdv-adega-demo',
@@ -85,7 +85,7 @@ O objetivo do projeto foi simular um sistema real de uso em balcão, priorizando
     status: 'active',
     stars: 0,
     views: 31,
-    createdAt: '2025-05-02',
+    createdAt: '2026-05-02',
   },
   {
     id: 'lp-nutri',
@@ -107,7 +107,7 @@ O principal objetivo do projeto foi transformar visitantes em potenciais cliente
     status: 'active',
     stars: 0,
     views: 27,
-    createdAt: '2025-05-13',
+    createdAt: '2026-05-13',
   },
   {
     id: 'crud-cantina',
@@ -118,13 +118,35 @@ O principal objetivo do projeto foi transformar visitantes em potenciais cliente
 A aplicação implementa as quatro operações fundamentais (Create, Read, Update e Delete), possibilitando cadastrar novos itens, visualizar registros existentes, atualizar informações e remover dados. O projeto foi desenvolvido com foco em organização lógica, manipulação de dados e estruturação de funcionalidades comuns em sistemas reais de gestão.`,
     techs: ['TypeScript'  , 'JavaScript', 'HTML', 'CSS'],
     image: 'https://plus.unsplash.com/premium_photo-1663050786427-8d71c177946c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/henriquerodeghiero/crud-cantina',
+    github: 'https://github.com/rdgfps/crud-cantina',
     deploy: null,
     featured: true,
     status: 'active',
     stars: 7,
     views: 312,
-    createdAt: '2025-03-10',
+    createdAt: '2026-03-10',
+  },
+  {
+    id: 'postai',
+    name: 'PostAí',
+    description: 'Dashboard demo para gerenciamento de posts em redes sociais, com criação, agendamento, calendário, métricas e perfil de usuário.',
+
+longDescription: `Projeto de uma aplicação web voltada para planejamento e gerenciamento de conteúdo em redes sociais.
+
+A plataforma permite realizar login em modo demo, criar posts, selecionar plataformas como Instagram, Facebook, Twitter, LinkedIn e TikTok, agendar publicações, acompanhar posts recentes e visualizar métricas no dashboard.
+
+O sistema também conta com calendário editorial, tela de analytics, edição de perfil, configurações e suporte. A aplicação foi adaptada para funcionar como demo de portfólio, sem necessidade de backend, utilizando dados simulados e persistência local no navegador.
+
+O projeto foi desenvolvido com foco em interface moderna, organização de componentes, manipulação de estado, rotas com React Router e experiência prática próxima de um sistema real de gestão de conteúdo digital.`,
+    techs: ['TypeScript', 'HTML', 'CSS', 'Git'],
+    image: 'https://images.unsplash.com/photo-1683721003111-070bcc053d8b?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/postai-tailwind',
+    deploy: 'https://postai-pi.vercel.app/',
+    featured: true,
+    status: 'active',
+    stars: 3,
+    views: 102,
+    createdAt: '2025-10-10',
   },
   {
     id: 'car-catalog',
@@ -135,13 +157,13 @@ A aplicação implementa as quatro operações fundamentais (Create, Read, Updat
 O projeto foi desenvolvido com foco em componentes reutilizáveis, rotas e gerenciamento de estado, servindo como prática de conceitos essenciais do desenvolvimento front-end moderno.`,
     techs: ['JavaScript', 'CSS', 'HTML'],
     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=983&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    github: 'https://github.com/henriquerodeghiero/car-catalog',
+    github: 'https://github.com/rdgfps/car-catalog',
     deploy: 'https://car-catalog-lime.vercel.app/',
     featured: true,
     status: 'active',
     stars: 0,
     views: 14,
-    createdAt: '2025-01-22',
+    createdAt: '2026-01-22',
   },
   {
     id: 'devfolio',
@@ -160,6 +182,6 @@ O formulário de contato usa a API do Formspree para enviar emails sem backend. 
     status: 'active',
     stars: 3,
     views: 410,
-    createdAt: '2025-02-05',
+    createdAt: '2026-02-05',
   }
 ]
