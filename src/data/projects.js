@@ -149,6 +149,28 @@ O projeto foi desenvolvido com foco em interface moderna, organização de compo
     createdAt: '2025-10-10',
   },
   {
+    id: 'lp-advocacia',
+    name: 'Landing Page - Advocacia',
+    description: 'Landing page moderna para escritório de advocacia, com apresentação institucional, áreas de atuação, pré-diagnóstico jurídico, depoimentos e contato via WhatsApp.',
+
+longDescription: `Projeto de uma landing page profissional voltada para apresentação de um escritório de advocacia e captação de clientes.
+
+A página apresenta uma experiência visual sofisticada, com hero animado, navegação por seções, problemas jurídicos comuns, áreas de atuação, processo de atendimento, depoimentos, chamada final para contato e footer institucional.
+
+O sistema também conta com uma seção de pré-diagnóstico jurídico, onde o visitante seleciona a área do caso, nível de urgência, status dos documentos e canal preferido. Ao final, a aplicação gera uma mensagem personalizada para envio direto pelo WhatsApp, facilitando o primeiro contato com o escritório.
+
+O projeto foi desenvolvido com foco em design responsivo, interface elegante, animações com Framer Motion, componentes reutilizáveis e experiência de conversão próxima de um site profissional real para serviços jurídicos.`,
+    techs: ['TypeScript', 'HTML', 'CSS', 'Git'],
+    image: 'https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/lp-advocacia',
+    deploy: 'https://lp-advocacia-beige.vercel.app/',
+    featured: true,
+    status: 'active',
+    stars: 2,
+    views: 74,
+    createdAt: '2026-06-02',
+  },
+  {
     id: 'car-catalog',
     name: 'Catálogo de Carros',
     description: 'Catálogo de carros desenvolvido em React JS com funcionalidades de listagem, cadastro, pesquisa e interação com os veículos. Utiliza Json Server para simular API e persistência de dados.',
