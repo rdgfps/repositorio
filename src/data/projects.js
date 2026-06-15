@@ -171,6 +171,30 @@ O projeto foi desenvolvido com foco em design responsivo, interface elegante, an
     createdAt: '2026-06-02',
   },
   {
+    id: 'apostas-copa',
+    name: 'CRUD - Apostas da Copa 2026',
+    description: 'Sistema de apostas da Copa do Mundo 2026 desenvolvido em Python com PostgreSQL, psycopg2 e Rich, permitindo o gerenciamento de apostas e a simulação de resultados.',
+
+longDescription: `Projeto acadêmico desenvolvido para demonstrar a integração entre Python e PostgreSQL utilizando a biblioteca psycopg2, aplicando conceitos de CRUD, estruturas de dados e manipulação de banco de dados relacional.
+
+A aplicação permite cadastrar apostas sobre a seleção campeã da Copa do Mundo 2026, oferecendo funcionalidades para incluir, listar, alterar e excluir registros por meio de um menu interativo no terminal.
+
+O sistema conta com uma rotina de simulação de resultados, na qual o usuário informa a seleção campeã e a aplicação identifica os vencedores, calculando automaticamente o valor que cada apostador deve receber de forma proporcional ao valor investido.
+
+Os dados são armazenados em um banco PostgreSQL hospedado no Neon, utilizando consultas parametrizadas para garantir maior segurança e evitar SQL Injection. A exibição das informações é realizada com o pacote Rich, proporcionando tabelas organizadas e uma melhor experiência no terminal.
+
+O projeto foi desenvolvido com foco em boas práticas de programação, separação de responsabilidades em módulos independentes e uso de estruturas nativas do Python, como tuplas, listas e dicionários.`,
+    techs: ['Python'],
+    image: 'https://plus.unsplash.com/premium_photo-1777774239457-24f5bbcb0d7f?q=80&w=829&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/apostas-copa',
+    deploy: 'null',
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 25,
+    createdAt: '2026-06-15',
+  },
+  {
     id: 'car-catalog',
     name: 'Catálogo de Carros',
     description: 'Catálogo de carros desenvolvido em React JS com funcionalidades de listagem, cadastro, pesquisa e interação com os veículos. Utiliza Json Server para simular API e persistência de dados.',
