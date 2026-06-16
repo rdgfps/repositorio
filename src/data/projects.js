@@ -195,6 +195,28 @@ O projeto foi desenvolvido com foco em boas práticas de programação, separaç
     createdAt: '2026-06-15',
   },
   {
+    id: 'lp-imobi',
+    name: 'Landing Page - Imobiliária',
+    ddescription: 'Plataforma imobiliária desenvolvida em Next.js com PostgreSQL, Prisma e NextAuth, permitindo gerenciamento completo de imóveis, usuários e autenticação segura.',
+
+longDescription: `Projeto web acadêmico desenvolvido para demonstrar a integração entre Next.js App Router, TypeScript e PostgreSQL utilizando Prisma como ORM, aplicando conceitos de CRUD, autenticação e proteção de rotas.
+
+A aplicação permite cadastrar, listar, editar e excluir imóveis, bem como gerenciar usuários e perfis de administrador via painel administrativo. A autenticação é feita com NextAuth, garantindo login seguro e sessões JWT, enquanto o middleware protege as rotas /admin.
+
+O sistema armazena dados em PostgreSQL e utiliza consultas parametrizadas por meio do Prisma para prevenir SQL Injection e manter a segurança. A interface é construída com Tailwind CSS e componentes reutilizáveis, oferecendo experiência moderna e responsiva.
+
+O projeto também inclui upload de imagens, validação de formulários com Zod e separação de responsabilidades em módulos independentes, como rotas API, componentes, hooks e utilitários. Tudo isso com foco em boas práticas, tipagem forte e arquitetura de código organizada para facilitar manutenção e escalabilidade.`,
+    techs: ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'Git'],
+    image: 'https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/lp-imobi',
+    deploy: 'https://lp-imobi-eta.vercel.app/',
+    featured: true,
+    status: 'active',
+    stars: 2,
+    views: 121,
+    createdAt: '2026-06-15',
+  },
+  {
     id: 'car-catalog',
     name: 'Catálogo de Carros',
     description: 'Catálogo de carros desenvolvido em React JS com funcionalidades de listagem, cadastro, pesquisa e interação com os veículos. Utiliza Json Server para simular API e persistência de dados.',
