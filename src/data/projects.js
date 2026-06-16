@@ -197,7 +197,7 @@ O projeto foi desenvolvido com foco em boas práticas de programação, separaç
   {
     id: 'lp-imobi',
     name: 'Landing Page - Imobiliária',
-    ddescription: 'Plataforma imobiliária desenvolvida em Next.js com PostgreSQL, Prisma e NextAuth, permitindo gerenciamento completo de imóveis, usuários e autenticação segura.',
+    description: 'Plataforma imobiliária desenvolvida em Next.js com PostgreSQL, Prisma e NextAuth, permitindo gerenciamento completo de imóveis, usuários e autenticação segura.',
 
 longDescription: `Projeto web acadêmico desenvolvido para demonstrar a integração entre Next.js App Router, TypeScript e PostgreSQL utilizando Prisma como ORM, aplicando conceitos de CRUD, autenticação e proteção de rotas.
 
