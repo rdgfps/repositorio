@@ -88,6 +88,30 @@ O objetivo do projeto foi simular um sistema real de uso em balcão, priorizando
     createdAt: '2026-05-02',
   },
   {
+    id: 'hotel-reservas',
+    name: 'Projeto acadêmico - API Reservas de Hotel',
+    description: 'API de reservas de hotel desenvolvida com Node.js, Express, Prisma e PostgreSQL, com cadastro de clientes, quartos, reservas, usuários, autenticação por token, recuperação de senha e logs do sistema.',
+
+longDescription: `Projeto desenvolvido para gerenciamento de reservas de hotel, com foco em organizar clientes, quartos, reservas e usuários por meio de uma API estruturada.
+
+A aplicação permite cadastrar, listar, buscar, atualizar e excluir clientes, quartos e reservas, controlando períodos de hospedagem, status da reserva e relacionamento entre cliente, quarto e usuário responsável pela criação da reserva.
+
+O sistema conta com autenticação por token, cadastro de usuários com senha criptografada usando bcrypt, validação forte de senha, bloqueio de e-mail duplicado, confirmação de conta por código de ativação e recuperação de senha por e-mail.
+
+A API também possui controle de acesso por nível de usuário, middleware de autenticação aplicado em rotas protegidas, bloqueio por tentativas inválidas de login, registro de último login e logs das principais ações do sistema, como login, tentativa inválida, cadastro, ativação, recuperação de senha e ações suspeitas.
+
+Os dados são armazenados em PostgreSQL utilizando Prisma como ORM, com migrations, relacionamentos entre as tabelas, validações com Zod, envio de e-mails via Mailtrap e organização em camadas de controllers, services, models, routes e middlewares.`,
+    techs: ['Typescript', 'Git', 'Node.js', 'Zod', 'Prisma', 'bcrypt', 'PostgreSQL'],
+    image: 'https://images.unsplash.com/photo-1620332372374-f108c53d2e03?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/hotel-reservas',
+    deploy: 'null',
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 16,
+    createdAt: '2026-06-29',
+  },
+  {
     id: 'lp-nutri',
     name: 'Landing Page Profissional',
     description: 'Landing page profissional para nutricionista, desenvolvida com foco em conversão e captação de pacientes. Design moderno, responsivo e otimizado para transmitir autoridade e facilitar o contato direto via WhatsApp.',
