@@ -9,7 +9,7 @@ export const developer = {
   linkedin: 'https://linkedin.com/in/henriquerodeghiero',
   instagram: 'https://instagram.com/rodeghierotech',
   avatar: 'https://api.dicebear.com/9.x/initials/svg?seed=HR&backgroundColor=c8f135&textColor=0a0a0b&fontSize=38',
-  stack: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git'],
+  stack: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git', 'React'],
   education: [
     { degree: 'Tecnólogo em ADS', institution: 'UniSenac — Pelotas', period: '2025 – Presente' },
     { degree: 'Computação e Robótica', institution: 'MooDev', period: '2018' },
@@ -22,15 +22,15 @@ export const developer = {
   ],
   stats: {
     projects: 7,
-    commits: 140,
+    commits: 200,
     stars: 18,
-    years: 1,
+    years: 2,
   },
 }
 
 export const allTechs = [
   'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS',
-  'MySQL', 'Git', 'TailwindCSS', 'Node.js', 'Flask',
+  'MySQL', 'Git', 'TailwindCSS', 'Node.js', 'Flask','React',
 ]
 
 export const projects = [
@@ -116,7 +116,7 @@ O principal objetivo do projeto foi transformar visitantes em potenciais cliente
     longDescription: `Projeto de um sistema CRUD voltado para gerenciamento de cantina, permitindo o controle de dados como produtos, pedidos ou registros relacionados.
 
 A aplicação implementa as quatro operações fundamentais (Create, Read, Update e Delete), possibilitando cadastrar novos itens, visualizar registros existentes, atualizar informações e remover dados. O projeto foi desenvolvido com foco em organização lógica, manipulação de dados e estruturação de funcionalidades comuns em sistemas reais de gestão.`,
-    techs: ['TypeScript'  , 'JavaScript', 'HTML', 'CSS'],
+    techs: ['TypeScript', 'React', 'JavaScript', 'HTML', 'CSS'],
     image: 'https://plus.unsplash.com/premium_photo-1663050786427-8d71c177946c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/rdgfps/crud-cantina',
     deploy: null,
@@ -138,7 +138,7 @@ A plataforma permite realizar login em modo demo, criar posts, selecionar plataf
 O sistema também conta com calendário editorial, tela de analytics, edição de perfil, configurações e suporte. A aplicação foi adaptada para funcionar como demo de portfólio, sem necessidade de backend, utilizando dados simulados e persistência local no navegador.
 
 O projeto foi desenvolvido com foco em interface moderna, organização de componentes, manipulação de estado, rotas com React Router e experiência prática próxima de um sistema real de gestão de conteúdo digital.`,
-    techs: ['TypeScript', 'HTML', 'CSS', 'Git'],
+    techs: ['TypeScript', 'React', 'HTML', 'CSS', 'Git'],
     image: 'https://images.unsplash.com/photo-1683721003111-070bcc053d8b?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/rdgfps/postai-tailwind',
     deploy: 'https://postai-pi.vercel.app/',
@@ -160,7 +160,7 @@ A página apresenta uma experiência visual sofisticada, com hero animado, naveg
 O sistema também conta com uma seção de pré-diagnóstico jurídico, onde o visitante seleciona a área do caso, nível de urgência, status dos documentos e canal preferido. Ao final, a aplicação gera uma mensagem personalizada para envio direto pelo WhatsApp, facilitando o primeiro contato com o escritório.
 
 O projeto foi desenvolvido com foco em design responsivo, interface elegante, animações com Framer Motion, componentes reutilizáveis e experiência de conversão próxima de um site profissional real para serviços jurídicos.`,
-    techs: ['TypeScript', 'HTML', 'CSS', 'Git'],
+    techs: ['TypeScript', 'React', 'HTML', 'CSS', 'Git'],
     image: 'https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     github: 'https://github.com/rdgfps/lp-advocacia',
     deploy: 'https://lp-advocacia-beige.vercel.app/',
@@ -193,6 +193,30 @@ O projeto foi desenvolvido com foco em boas práticas de programação, separaç
     stars: 0,
     views: 25,
     createdAt: '2026-06-15',
+  },
+  {
+    id: 'pampa-imoveis',
+    name: 'Pampa Imóveis - Exemplar de site para imobiliária',
+    description: 'Site imobiliário desenvolvido com Next.js, TypeScript, Tailwind CSS e Supabase, com catálogo de imóveis, área administrativa protegida, SEO e integração com WhatsApp.',
+
+longDescription: `Projeto desenvolvido para uma imobiliária, com foco em apresentar imóveis de forma profissional, responsiva e otimizada para conversão.
+
+A aplicação permite visualizar imóveis disponíveis para venda ou aluguel, com páginas individuais para cada anúncio, galeria de imagens, informações detalhadas, localização, características do imóvel e botões de contato direto pelo WhatsApp.
+
+O sistema conta com uma área administrativa protegida, onde é possível cadastrar, editar e gerenciar imóveis, definir destaques, controlar status de publicação, marcar imóveis como promoção e acompanhar informações como visualizações dos anúncios.
+
+Os dados são armazenados no Supabase, utilizando autenticação, políticas de segurança com RLS, validação de dados com Zod e controle de acesso para administradores. O projeto também conta com rate limit na área administrativa para reforçar a segurança contra acessos excessivos e tentativas repetidas de login.
+
+A aplicação foi desenvolvida com Next.js, TypeScript, Tailwind CSS, componentes baseados em shadcn/ui e integração com Supabase, priorizando performance, SEO, responsividade, organização de código e uma experiência visual moderna para o mercado imobiliário.`,
+    techs: ['TypeScript', 'React', 'HTML', 'CSS', 'Git'],
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/pampa-imoveis',
+    deploy: 'https://pampa-imoveis.vercel.app/',
+    featured: true,
+    status: 'active',
+    stars: 2,
+    views: 70,
+    createdAt: '2026-06-30',
   },
   {
     id: 'lp-imobi',
