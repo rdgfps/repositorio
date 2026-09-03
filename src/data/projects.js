@@ -112,6 +112,32 @@ Os dados são armazenados em PostgreSQL utilizando Prisma como ORM, com migratio
     createdAt: '2026-06-29',
   },
   {
+    id: 'tv-ads',
+    name: 'Gerenciador de Anúncios em TVs',
+    description: 'Sistema web para gerenciamento de anúncios em TVs e monitores, desenvolvido com Next.js, TypeScript, Drizzle ORM e PostgreSQL, com painel administrativo, cadastro de TVs, upload de mídias, criação de playlists, pareamento de dispositivos e player fullscreen.',
+
+longDescription: `Projeto desenvolvido para gerenciamento de conteúdos publicitários exibidos em TVs e monitores, com foco em organizar mídias, playlists e dispositivos conectados por meio de um painel administrativo.
+
+A aplicação permite cadastrar TVs, definir nome e localização, gerar códigos de pareamento, vincular playlists aos dispositivos e acompanhar o status das telas com base no último heartbeat enviado pelo player.
+
+O sistema conta com autenticação por e-mail e senha usando Better Auth, sessão persistente e proteção das rotas do painel, redirecionando usuários não autenticados para a tela de login.
+
+No painel, é possível enviar imagens e vídeos, cadastrar conteúdos, criar playlists, adicionar mídias às playlists, remover itens e reorganizar a ordem de exibição com drag and drop. Cada alteração na playlist atualiza sua versão, permitindo que o player detecte mudanças automaticamente.
+
+A página /player funciona em tela cheia para exibição dos anúncios. No primeiro acesso, o dispositivo gera um código de pareamento, que pode ser conectado pelo painel. Após pareado, o player busca a playlist vinculada, alterna imagens por tempo definido, reproduz vídeos automaticamente e sincroniza atualizações por polling.
+
+Os dados são armazenados em PostgreSQL utilizando Drizzle ORM, com tabelas para usuários, sessões, mídias, playlists, itens de playlist e TVs. O projeto utiliza Next.js App Router, Server Actions, rotas de API para player, validações com Zod, Tailwind CSS para interface e estrutura preparada para evolução com storage externo, cache offline e sincronização em tempo real.`,
+    techs: ['Typescript', 'Git', 'Prisma', 'BetterAuth', 'PostgreSQL'],
+    image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    github: 'https://github.com/rdgfps/tv-ads',
+    deploy: 'http://tv-ads-one.vercel.app',
+    featured: true,
+    status: 'active',
+    stars: 0,
+    views: 36,
+    createdAt: '2026-09-02',
+  },
+  {
     id: 'lp-nutri',
     name: 'Landing Page Profissional',
     description: 'Landing page profissional para nutricionista, desenvolvida com foco em conversão e captação de pacientes. Design moderno, responsivo e otimizado para transmitir autoridade e facilitar o contato direto via WhatsApp.',
